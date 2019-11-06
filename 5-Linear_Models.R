@@ -5,6 +5,7 @@ library(dplyr)
 library(ggplot2)
 library(ggfortify)
 library(emmeans)
+library(multcomp)
 
 plant_gr <- read.csv("plant.growth.rate.csv")
 glimpse(plant_gr)
@@ -74,6 +75,8 @@ emm_model_grow<- emmeans(model_grow, "parasite")
 pairs(emm_model_grow)
 
 #visually compare marginal means (LS means)
-plot(emm_model_grow, comparisons = TRUE)
+plot(emm_model_grow, comparisons = TRUE)+
+  coord_flip()
+
 #connecting letters differences report
-CLD(emm_model_grow)
+multcomp::cld(emm_model_grow)
