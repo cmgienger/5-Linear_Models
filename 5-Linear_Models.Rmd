@@ -12,6 +12,7 @@ library(ggplot2)
 library(ggfortify)
 library(emmeans)
 library(multcomp)
+library(multcompView)
 ```
 ## General Introduction to Linear Models
 Need to parse out to separate code chunks

@@ -6,6 +6,7 @@ library(ggplot2)
 library(ggfortify)
 library(emmeans)
 library(multcomp)
+library(multcompView)
 
 plant_gr <- read.csv("plant.growth.rate.csv")
 glimpse(plant_gr)
