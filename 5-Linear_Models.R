@@ -69,6 +69,7 @@ summary(model_grow)
 sumDat<-daphnia %>%
   group_by(parasite) %>%
   summarise(meanGR = mean(growth.rate))
+
 sumDat
 
 #Multiple Contrasts using EMmeans package
