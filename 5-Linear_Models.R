@@ -19,8 +19,7 @@ ggplot(plant_gr,
   theme_bw()
 
 #fit the model; notice y variable define first, "as function of..."
-model_pgr <- lm(plant.growth.rate ~ soil.moisture.content,
-                data = plant_gr)
+model_pgr <- lm(plant.growth.rate ~ soil.moisture.content, data = plant_gr)
 
 #check the assumptions
 autoplot(model_pgr, smooth.colour = NA)
@@ -28,6 +27,10 @@ autoplot(model_pgr, smooth.colour = NA)
 #interpret the model
 anova(model_pgr) #does not perform ANOVA
 summary(model_pgr)
+
+#use coefficients to predict new values of plant growth rate
+new <- data.frame(soil.moisture.content=c(1.75)) #new value of soil.moisture.content
+predict.lm(model_pgr, new)
 
 #add model prediction from coefficients (fit line) to the graph 
 ggplot(plant_gr, aes(x = soil.moisture.content,
