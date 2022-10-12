@@ -40,6 +40,8 @@ ggplot(plant_gr, aes(x = soil.moisture.content,
   ylab("Plant Growth Rate (mm/week)") +
   theme_bw()
 
+####################################################################
+####################################################################
 #One-Way Analysis of Variance (ANOVA)
 
 daphnia <- read.csv("Daphniagrowth.csv")
