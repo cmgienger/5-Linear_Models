@@ -45,7 +45,14 @@ ggplot(plant_gr, aes(x = soil.moisture.content,
 #One-Way Analysis of Variance (ANOVA)
 
 daphnia <- read.csv("Daphniagrowth.csv")
+daphnia$parasite <- as.factor(daphnia$parasite) #forces parasite variable to be a factor
 glimpse(daphnia)
+
+#find out more about the dataframe
+nlevels(daphnia$parasite)
+levels(daphnia$parasite)
+unique(daphnia$parasite)
+
 
 #first we plot the data; boxplots are good for categorical predictors
 ggplot(daphnia, aes(x = parasite, y = growth.rate)) +
@@ -57,6 +64,13 @@ ggplot(daphnia, aes(x = parasite, y = growth.rate)) +
   geom_boxplot() +
   theme_bw() +
   coord_flip()
+
+#calculate means for context
+sumDat <- daphnia %>%
+  group_by(parasite) %>%
+  summarise(meanGR = mean(growth.rate))
+
+sumDat
 
 #construct linear model-check assumptions
 model_grow <- lm(growth.rate ~ parasite, data = daphnia)
