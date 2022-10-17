@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 .xlsx
+.Rmd
 
 
 # General
@@ -33,6 +34,6 @@ Temporary Items
 .apdisk
 
 
-/assignment_code   #move assigned homework out of this file
+assignment_code   #move assigned homework out of this file
 
 ANOVA_practice.Rmd  #examples for student practice after lecture
