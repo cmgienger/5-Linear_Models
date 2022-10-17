@@ -32,7 +32,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-hidden
+hidden #make folder before committing otherwise will cache and impossible to undo
 
 assignment_code   #move assigned homework out of this file
 
