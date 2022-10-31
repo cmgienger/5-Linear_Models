@@ -1,1 +1,0 @@
-#Linear Regression and ANOVA
