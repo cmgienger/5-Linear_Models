@@ -1,1 +1,1 @@
-# 5-Linear_Models
+# 5-Linear_Models: regression and ANOVA
