@@ -1,1 +1,3 @@
-# 5-Linear_Models: regression and ANOVA
+# 5-Linear_Models
+Introduction to linear regression and ANOVA
+
