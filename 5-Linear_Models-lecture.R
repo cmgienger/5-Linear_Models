@@ -30,6 +30,9 @@ summary(model_pgr)
 
 #use coefficients to predict new values of plant growth rate
 new_point <- data.frame(soil.moisture.content=c(1.75)) #new value of soil.moisture.content
+new_point
+
+
 predict(model_pgr, new_point)
 
 #add model prediction from coefficients (fit line) to the graph 
