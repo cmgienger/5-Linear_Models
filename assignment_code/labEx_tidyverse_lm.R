@@ -6,8 +6,6 @@ View(iris)  # View it in RStudio
 
 ### dplyr problems ###
 
-# NOTE: Don't forget, you there's a cheat sheet available on Box under "Resources"
-
 # A. Complete the filter so that it only returns the "virginica" species
 iris %>%
   filter(___)
