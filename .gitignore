@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 .xlsx
+.Rmd
 
 # General
 .DS_Store
