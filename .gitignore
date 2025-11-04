@@ -36,4 +36,6 @@ assignment_code   #move assigned homework out of this file
 
 markdown    #various markdown practice excercises
 
+ignored #null model vis and other stuff to be ignored by students
+
 .gitignore
