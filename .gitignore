@@ -32,10 +32,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-assignment_code   #move assigned homework out of this file
+assignment_code/   #move assigned homework out of this file
 
 markdown    #various markdown practice excercises
 
-ignored/ #null model vis and other stuff to be ignored by students
+ignored/ #null model vis and other stuff to be ignored by students /at end required
 
 .gitignore
