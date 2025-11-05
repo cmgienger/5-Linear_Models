@@ -3,7 +3,7 @@ library(dplyr)
 library(patchwork)
 
 # --- Read and prep data ---
-Daphniagrowth <- read.csv("Daphniagrowth.csv")
+Daphniagrowth <- read.csv("./Daphniagrowth.csv")
 Daphniagrowth$parasite <- as.factor(Daphniagrowth$parasite)
 
 # Overall mean (H0)
@@ -34,7 +34,7 @@ p_null <- ggplot(Daphniagrowth, aes(x = index, y = growth.rate, color = parasite
   geom_segment(aes(xend = index, yend = overall_mean),
                color = "black", alpha = 0.6, linewidth = 0.7) +
   geom_point(size = 3, alpha = 0.7) +
-  geom_hline(yintercept = overall_mean, color = "red", linewidth = 1.2) +
+  geom_hline(yintercept = overall_mean, color = "red", linewidth = 1.5) +
   labs(
     title = "Null Hypothesis (Ho): No Effect of Parasite",
     x = "Index", y = "Growth rate"
@@ -52,7 +52,7 @@ p_alt <- ggplot(Daphniagrowth, aes(x = index, y = growth.rate, color = parasite)
   geom_segment(
     data = group_ranges,
     aes(x = x_min, xend = x_max, y = mean_growth, yend = mean_growth, color = parasite),
-    linewidth = 1.2
+    linewidth = 1.5
   ) +
   labs(
     title = "Alternative Hypothesis (Ha): Parasite Affects Growth",
